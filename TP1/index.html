@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness</title>
+  <link rel = "stylesheet" href= "CSS/estilo.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,600;0,700;1,500;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav id="header">
+    <div class="elementos-header">
+      <img src="img/logo.svg" id="logo" alt="">
+      <p id="argentina">AR</p>
+    </div>
+  </nav>
+  <section class="principal">
+    <div class="textos">
+      <section id="titulo">
+        <p>¡TU MOMENTO ES AHORA!</p>
+      </section>
+      <section id="subtitulo">
+        <p>HACÉ TU BODY CHECK</p>
+      </section>
+      <section id="info">
+        <p>Obtené recomendaciones de entrenamiento y alimentación adaptados perfectamente para vos y tus obetivos</p>
+      </section>
+      <button onclick="document.getElementById('formulario').scrollIntoView();" type="button" name="boton" id="boton-1" class="boton">¡Quiero hacerlo!</button>
+    </div>
+  </section>
+  <section class="beneficios">
+    <section class="division">
+      <p>BENEFICIOS</p>
+      <ul id="lista">
+        <li>
+          <div class="seccionita">
+            <div class="icono">
+              <img src="img/fuego.svg" alt="">
+            </div>
+            <p class="1"></p>
+            <span>Mejora tu desempeño físico y mental</span>
+          </div>
+        </li>
+        <div class="linea">
+          <hr>
+        </div>
+        <li>
+          <div class="seccionita">
+            <div class="icono">
+              <img src="img/trofeo (1).svg" alt="">
+            </div>
+            <p class="1"></p>
+            <span>Entrenamientos adecuados a vos</span>
+          </div>
+        </li>
+        <div class="linea">
+          <hr>
+        </div>
+        <li>
+          <div class="seccionita">
+            <div class="icono">
+              <img src="img/huella-dactilar 1.svg" alt="">
+            </div>
+            <p class="1"></p>
+            <span>Para todos los objetivos y niveles</span>
+          </div>
+        </li>
+        <div class="linea">
+          <hr>
+        </div>
+        <li>
+          <div class="seccionita">
+            <div class="icono">
+              <img src="img/gimnasio (1).svg" alt="">
+            </div>
+            <p class="1"></p>
+            <span>Entrena donde y cuando quieras</span>
+          </div>
+        </li>
+        <div class="linea">
+          <hr>
+        </div>
+        <li>
+          <div class="seccionita">
+            <div class="icono">
+              <img src="img/restaurante.svg" alt="">
+            </div>
+            <p class="1"></p>
+            <span>Menús personalizados</span>
+          </div>
+        </li>
+        <div class="linea">
+          <hr>
+        </div>
+        <li>
+          <div class="seccionita">
+            <div class="icono">
+              <img src="img/papel-picado 1.svg" alt="">
+            </div>
+            <p class="1"></p>
+            <span>Obtené tu indice de masa corporal </span>
+          </div>
+        </li>
+      </ul>
+      <button onclick="document.getElementById('formulario').scrollIntoView();" type="button" name="boton" id="boton-1" class="boton">¡Comenzar!</button>
+    </section>
+  </section>
+  <section id="formulario">
+    <p id="bodycheck">BODY CHECK</p>
+    <div class="seccion-mayor">
+      <div class="imagen-desktop">
+        <img src="img/pngwing 1.png" alt="">
+      </div>
+      <form onsubmit="enviarFormulario(); return false" action="" class="form">
+        <div class="step active" id="step-1">
+          <div class="contador">
+          </div>
+          <div class="step-header">
+            <p class="step-titulo">¡Empezemos!</p>
+            <p class="step-subtitulo">Dejanos conocerte un poco mas</p>
+          </div>
+          <div class="step-group">
+            <input type="text" id="fname" name="fname" class="step-imput" placeholder=" ">
+            <label for="fname" class="step-label">Alias</label>
+          </div>
+          <div class="step-footer">
+            <button type="button" class="step__button step__button--next" data-to_step="2" data-step="1" id="siguiente">Siguiente</button>
+          </div>
+        </div>
+        <div class="step" id="step-2">
+          <div class="contador">
+            <div class="progreso">
+            </div>
+          </div>
+          <div class="step-header">
+            <p class="step-titulo"> ¡Hola! ¿Cual es tu objetivo principal?</p>
+          </div>
+          <div class="step-group">
+            <div class="checkbox">
+              <input type="checkbox" id="objetivo_1"name="objetivo1" value="">
+              <label for="objetivo_1" class="checkbox-label">Perder peso</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="objetivo_2"name="objetivo2" value="">
+              <label for="objetivo_2" class="checkbox-label">Ser mas activo</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="objetivo_3"name="objetivo3" value="">
+              <label for="objetivo_3" class="checkbox-label">Construir musculo</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="objetivo_4"name="objetivo4" value="">
+              <label for="objetivo_4" class="checkbox-label">Mantenerme en forma</label>
+            </div>
+          </div>
+          <div class="step-footer">
+            <div class="botones">
+              <button type="button" class="step__button step__button--back" data-to_step="1" data-step="2" id="atras"></button>
+              <button type="button" class="step__button step__button--next" data-to_step="3" data-step="2" id="siguiente">Siguiente</button>
+            </div>
+          </div>
+        </div>
+        <div class="step" id="step-3">
+          <div class="contador">
+            <div class="progreso">
+            </div>
+          </div>
+          <div class="step-header">
+            <p class="step-titulo">¿Que tipo de actividad preferís hacer?</p>
+          </div>
+          <div class="step-group">
+            <div class="checkbox">
+              <input type="checkbox" id="nivel_1"name="nivel1" value="">
+              <label for="nivel_1" class="checkbox-label">Ejercicio con mi propio peso</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="nivel_2"name="nivel2" value="">
+              <label for="nivel_2" class="checkbox-label">Ejercicio con pesas</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="nivel_3"name="nivel3" value="">
+              <label for="nivel_3" class="checkbox-label">Carreras y caminatas</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="nivel_4"name="nivel4" value="">
+              <label for="nivel_4" class="checkbox-label">Planes nutricionales</label>
+            </div>
+          </div>
+          <div class="step-footer">
+            <div class="botones">
+              <button type="button" class="step__button step__button--back" data-to_step="2" data-step="3" id="atras"></button>
+              <button type="button" class="step__button step__button--next" data-to_step="4" data-step="3" id="siguiente">Siguiente</button>
+            </div>
+          </div>
+        </div>
+        <div class="step" id="step-4">
+          <div class="contador">
+            <div class="progreso">
+            </div>
+          </div>
+          <div class="step-header">
+            <p class="step-titulo">¿Te identificás con alguna de estas categorias?</p>
+          </div>
+          <div class="step-group">
+            <div class="checkbox">
+              <input type="checkbox" id="alimentacion_1"name="alimentacion1" value="">
+              <label for="alimentacion_1" class="checkbox-label">Vegetariano</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="alimentacion_2"name="alimentacion2" value="">
+              <label for="alimentacion_2" class="checkbox-label">Vegano</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="alimentacion_3"name="alimentacion3" value="">
+              <label for="alimentacion_3" class="checkbox-label">Sin lactosa</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="alimentacion_4"name="alimentacion4" value="">
+              <label for="alimentacion_4" class="checkbox-label">Sin gluten</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="alimentacion_5"name="alimentacion5" value="">
+              <label for="alimentacion_5" class="checkbox-label">Diabetes</label>
+            </div>
+          </div>
+          <div class="step-footer">
+            <div class="botones">
+              <button type="button" class="step__button step__button--back" data-to_step="3" data-step="4" id="atras"></button>
+              <button type="button" class="step__button step__button--next" data-to_step="5" data-step="4" id="siguiente">¡Listo!</button>
+            </div>
+          </div>
+        </div>
+        <div class="step" id="step-5">
+          <div class="step-header">
+            <p class="step-titulo">Estamos analizando tus datos...</p>
+            <p class="step-subtitulo">Dejanos tu correo electronico para que recibas los resultados de tu body ceck</p>
+          </div>
+          <div class="step-group">
+            <input type="text" id="mail" name="mail" class="step-imput" placeholder=" ">
+              <label for="mail" class="step-label">Correo</label>
+          </div>
+          <div class="step-footer">
+            <div class="botones">
+              <button type="button" class="step__button step__button--back" data-to_step="4" data-step="5" id="atras"></button>
+              <button type="submit" class="step__button step__button--next" data-to_step="6" data-step="5" id="siguiente">Finalizar</button>
+            </div>
+          </div>
+        </div>
+        <div class="step no-mostrar" id="step-6">
+          <button type="button" id="cerrar"> <img src="img/Close.svg" onclick="location.reload()"/></button>
+          <div class="step-header">
+            <p class="step-titulo">¡Listo! <br>
+              Te enviamos un correo con los resultados de tu BodyCheck</p>
+              <p class="step-subtitulo">Enviamos un correo electronico a <span id="mail-usuario">@email</span></p>
+            </div>
+            <div class="step-imagen">
+              <img src="img/Vector.png" alt="">
+            </div>
+            <div class="agradecimiento">
+              <p>¡Gracias <span id="nombre-usuario">@nombre</span>!</p>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+  <section id="footer">
+    <div class="texto">
+      <p class="footer-titulo">Nuestras Redes</p>
+      <a href="#Instagram">Instagram</a>
+      <a href="#">Facebook</a>
+    </div>
+  </section>
+  <script src="js/script.js"></script>
+</body>
+</html>
