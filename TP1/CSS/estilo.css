@@ -1,0 +1,683 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  background: #25153C;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#header {
+  width: 100%;
+  height: 56px;
+  z-index: 1;
+  padding: 10px 16px;
+  position: fixed;
+  background: #180D28;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.elementos-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+#argentina{
+  font-weight: 600;
+  font-size: 17px;
+  color: #8783CA;
+  padding-top: 9px;
+}
+
+.principal{
+  width: 100%;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 56px;
+  align-items: flex-start;
+}
+
+.textos{
+  width: 100%;
+}
+
+#titulo {
+  margin-bottom: 9px;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 0.07em;
+  background: radial-gradient(89.71% 594.83% at 100% 50%, #5D419D 0%, #D27283 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+#subtitulo{
+  font-style: italic;
+  letter-spacing: 0.07em;
+  color: #FFFFFF;
+  margin-bottom: 7vh;
+}
+
+#info{
+  width: 90%;
+  min-width: 236px;
+  font-style: normal;
+  color: #FFFFFF;
+  margin-bottom: 72px
+}
+
+.boton{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 17px 41px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, .75);
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#boton-1{
+  margin-top: 8%;
+  background: #D7FF5E;
+  border-radius: 10px;
+  color: #462D80;
+  cursor: pointer;
+}
+
+.division p{
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 29px;
+  color: #D7FF5E;
+  padding-bottom: 32px;
+}
+
+.division .seccionita{
+  font-style: normal;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+hr{
+  border-style: none;
+  background:linear-gradient(to right, #D27283, #462D80);
+  height: 2px;
+}
+
+.division li{
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.division span{
+  display: flex;
+  align-self: center;
+}
+
+.icono {
+  display: flex;
+  align-self: center;
+  margin-right: 16px;
+}
+
+
+#formulario{
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 56px;
+  padding-bottom: 56px;
+  overflow: hidden;
+}
+
+#bodycheck{
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 29px;
+  color: #D7FF5E;
+  margin-bottom: 40px;
+}
+
+.form{
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.85);
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.form p {
+  font-family: 'Montserrat';
+  font-style: normal;
+  color: #FFFFFF;
+}
+
+.step .contador{
+  width: 100%;
+  height: 9px;
+  border: 2px solid #D7FF5E;
+  box-sizing: border-box;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#step-2 .progreso {
+  height: 9px;
+  width: 33%;
+  background-color:#D7FF5E;
+}
+
+#step-3 .progreso{
+  height: 9px;
+  width: 66%;
+  background-color:#D7FF5E;
+}
+
+#step-4 .progreso{
+  height: 9px;
+  width: 100%;
+  background-color:#D7FF5E;
+}
+
+#step-6 .step-subtitulo{
+  margin-top: 32px;
+}
+
+.step{
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+  margin: auto;
+  min-width: 100%;
+  opacity: 0;
+  height: 586px;
+}
+
+.step.active{
+  opacity: 1;
+}
+
+.step.to-left{
+  margin-left: -100%;
+}
+
+.step.inactive{
+  animation-name: scale;
+  animation-duration: .2s;
+  animation-direction: alternate;
+  animation-iteration-count: 5;
+}
+
+@keyframes scale {
+  from{
+    transform: scale(1);
+  }
+  to{
+    transform: scale(1.1)
+  }
+}
+
+.form .step-header{
+  margin-top: 24px;
+  margin-bottom: 42px;
+}
+
+.form .step-titulo{
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.form .step-subtitulo {
+  margin-top: 9px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.form .step-group{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.form .checkbox>input{
+  display: none;
+  cursor: pointer;
+}
+
+.form .checkbox-label{
+  width: 100%;
+  height: 48px;
+  user-select: none;
+  border: 2.5px solid #462D80;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  padding-top: 12px;
+  display: block;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: left;
+  padding-left: 15px;
+  cursor: pointer;
+}
+
+.checkbox>input:checked + label{
+  border: 2.5px solid #D7FF5E;
+}
+
+.form .step-imput{
+  padding-left: 15px;
+  width:100%;
+  height: 48px;
+  background: none;
+  border: none;
+  outline: none;
+  border: 2.5px solid #462D80;
+  box-sizing: border-box;
+  border-radius: 10px;
+  color: #FFFFFF;
+  transition: transform border;
+  cursor: pointer;
+}
+
+.step-imput:focus{
+  border: 2.5px solid #D7FF5E;
+}
+
+.step-imput:focus +.step-label,
+.step-imput:not(:placeholder-shown) + .step-label{
+  transform: translateY(-15px) scale(.90);
+  transform-origin: left top;
+  color: #D7FF5E;
+}
+
+.step-label{
+  font-style: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #FFFFFF;
+  position:absolute;
+  top: 0;
+  left: 15px;
+  transform: translateY(15px);
+  transition: transform .5s, color .3s;
+}
+
+.step-imagen{
+  margin: auto;
+}
+
+.agradecimiento{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.form .step-footer{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+#step-1 .step-footer{
+  margin-top: 300px;
+}
+
+#step-5 .step-footer{
+  margin-top: 270px;
+}
+.form .botones{
+  width: 100%;
+  margin: auto;
+}
+
+#siguiente{
+  background: radial-gradient(89.71% 594.83% at 100% 50%, #462D80 0%, #D27283 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  color: #FFFFFF;
+  display: inline-block;
+  flex-direction: column;
+  padding: 17px 38px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, .75);
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 12px;
+}
+.estilo-2 {
+  background: white;
+  background-clip: padding-box;
+  border-radius: 1em;
+}
+
+#atras {
+  display: inline-block;
+  flex-direction: column;
+  border: 2.5px solid transparent;
+  border-radius: 10px;
+  position: relative;
+  background:#25153C;
+  background-clip: padding-box;
+}
+
+#atras::before {
+  position: absolute;
+  margin: -2.5px;
+  top: 0px; bottom: 0px;
+  left: 0px; right: 0px;
+  background: linear-gradient(to right, #D27283, #8783CA);
+  content: '';
+  z-index: -1;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, .75);
+  border-radius: 10px;
+}
+
+#atras::after {
+  content: "Atras";
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  background: linear-gradient(to right, #D27283, #8783CA);
+  padding: 13.5px 25px;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#footer{
+  height: 200px;
+  background: #180D28;
+  padding: 24px;
+}
+
+.footer-titulo{
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+  color: #8783CA;
+  margin-bottom: 24px;
+}
+
+#footer a{
+  display: block;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+  color: #8783CA;
+  margin-bottom: 12px;
+}
+
+#step-6 .step-header{
+  margin-top: 0px;
+}
+
+#cerrar{
+  border: none;
+  margin-left: 90%;
+  background: transparent;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width:500px){
+
+  .principal{
+    padding-top: 370px;
+    height: 100%;
+    padding-left: 16px;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 28.23%, #25153C 99.75%), url('../img/fondo-mobile.jpg');
+  }
+
+  #titulo{
+    width: 279px;
+    height: 78px;
+    font-size: 32px;
+  }
+
+  #subtitulo{
+    width: 236px;
+    font-weight: 400px;
+    font-size: 18px;
+  }
+
+  #info{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .beneficios{
+    padding: 16px;
+  }
+
+  .division ul{
+    list-style: none;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.85);
+    border-radius: 10px;
+    padding-top: 25px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 32px;
+  }
+
+  .division li{
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+
+  .division li .icono {
+    display: inline;
+  }
+
+  .division .seccionita{
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .division span{
+    display: flex;
+    align-self: center;
+  }
+
+  .imagen-desktop{
+    display: none;
+  }
+  .cerrar{
+    padding-left: 90%
+  }
+}
+
+@media screen and (min-width:500px){
+
+  .principal{
+    height: 100%;
+    padding-left: 32px;
+    padding-top: 20%;
+    background-image: linear-gradient(359.23deg, #25153C 10.22%, rgba(70, 45, 128, 0) 30.83%), url('../img/fondo-desktop.jpg');
+  }
+
+  #titulo{
+    width: 500px;
+    font-size: 45px;
+  }
+
+  #subtitulo{
+    width: 369px;
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  #info{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 29px;
+    width:70%;
+    max-width: 700px;
+  }
+
+  .beneficios{
+    padding: 10% 10% ;
+    background: radial-gradient(48.72% 52.03% at 50% 47.97%, #25153C 0%, #D27283 0%, #492E80 35.18%, #25153C 82.91%, #25153C 99.99%);
+  }
+
+  .beneficios p{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    font-weight: 800;
+    font-size: 38px;
+    line-height: 51px;
+  }
+
+  .division ul{
+    list-style: none;
+    padding: 40px;
+    grid-gap: 36px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .division li{
+    background: #25153C;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.85);
+    border-radius: 10px;
+    padding: 15%;
+    text-align: center;
+  }
+
+  .division li span{
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .division .seccionita{
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .linea{
+    display: none;
+  }
+  .boton{
+    width: 30%;
+  }
+
+  #boton-1:hover{
+    background-color: #BCDE40;
+  }
+
+
+  #formulario{
+    padding: 32px;
+    background: radial-gradient(40.71% 43.47% at 50% 56.53%, #25153C 0%, #D27283 0.01%, #492E80 67.19%, #25153C 99.99%, #25153C 100%);
+    background-image: image(src="../img/pngwing 1.png");
+  }
+
+  #bodycheck{
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  #formulario{
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 32px;
+    padding-bottom: 0px;
+  }
+
+  .seccion-mayor{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 0px;
+  }
+
+  .imagen-desktop{
+    width: 55%;
+    height: 70%;
+  }
+
+  .form{
+    background-color: #25153C;
+    padding-top: 20px;
+    padding-left: 4%;
+    padding-right:4%;
+    text-align:center;
+    margin-bottom: 32px;
+    width: 48%;
+  }
+
+  .form .step-titulo{
+    font-size: 30px;
+    padding-top: 16px;
+  }
+
+  .form .step-subtitulo{
+    font-size: 20px;
+  }
+
+  .form .step__button:hover{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), radial-gradient(89.71% 594.83% at 100% 50%, #462D80 0%, #D27283 100%);
+  }
+
+  #atras {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: inline-block;
+    flex-direction: column;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, .75);
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+    background: radial-gradient(100% 400% at 100% 55%, #8783CA 0%, #D27283 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    background-color: transparent;
+    border: 2.5px solid transparent;
+    border-radius: 10px;
+    border-image: linear-gradient(to right, #D27283, #8783CA)1;
+  }
+  #cerrar{
+    border: none;
+    margin-left: 100%;
+    background: transparent;
+  }
+
+  #footer{
+    padding:32px;
+  }
+}
